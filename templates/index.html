@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="p-8 flex flex-col items-center">
+    <h1 class="font-medium loading-tight text-4xl mt-0 mb-4 text-blue-600">WELCOME!</h1>
+    <form action="{% url 'analyze_code_view' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="python_file">
+        <input type="submit" name="submit" id="submit" value="Submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+    </form>
+</div>
+
+{% endblock body %}

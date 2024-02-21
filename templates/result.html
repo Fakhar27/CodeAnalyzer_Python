@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="p-8 flex flex-col items-center">
+    <h1 class="font-medium loading-tight text-4xl mt-0 mb-4 text-blue-600">Analysis Results</h1>
+    <p>Total Loops: {{ results.total_loops }}</p>
+    <p>Nested Loops: {{ results.nested_loops }}</p>
+    <p>If/Else Statements: {{ results.if_else_statements }}</p>
+</div>
+{% endblock body %}
